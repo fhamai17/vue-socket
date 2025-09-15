@@ -38,7 +38,13 @@ async function listenReverb() {
         "type": "default",
         "position": "bottom-right"
       })
+    })
 
+  // รับ event เพื่อ refresh หน้า
+  Echo.channel('Product')
+    .listen('.page.refresh', (e) => {
+      console.log('Refresh event:', e)
+      // action refresh หน้า
     })
 }
 
